@@ -1,8 +1,4 @@
-class Move:
-    def __init__(self, start, target, promotion=None):
-        self.start = start
-        self.target = target
-        self.promotion = promotion
+from moves import Move
 
 class ChessBoard:
     def __init__(self):
