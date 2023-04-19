@@ -1,3 +1,5 @@
+from opening_book import opening_book
+
 class ChessEngine:
     def __init__(self, board, time_management):
         self.board = board
@@ -11,15 +13,15 @@ class ChessEngine:
         self.board.make_move(best_move)
         
     def estimate_moves_left(self):
-    num_pieces, num_pawns, material_balance = self.analyze_position()
-    phase_factor = self.calculate_phase_factor(num_pieces, num_pawns, material_balance)
+        num_pieces, num_pawns, material_balance = self.analyze_position()
+        phase_factor = self.calculate_phase_factor(num_pieces, num_pawns, material_balance)
 
-    if phase_factor < 0.3:
-        return 50  # Opening phase
-    elif phase_factor < 0.7:
-        return 35  # Middle game
-    else:
-        return 20  # Endgame
+        if phase_factor < 0.3:
+            return 50  # Opening phase
+        elif phase_factor < 0.7:
+            return 35  # Middle game
+        else:
+            return 20  # Endgame
 
     def analyze_position(self):
         num_pieces = 0
