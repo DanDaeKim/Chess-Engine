@@ -1,4 +1,5 @@
 from moves import Move
+from evaluation import evaluate_board, pawn_table, knight_table, bishop_table, rook_table, queen_table, king_table
 
 class ChessBoard:
     def __init__(self):
