@@ -1,6 +1,7 @@
 class ChessEngine:
-    def __init__(self, board):
+    def __init__(self, board, time_management):
         self.board = board
+        self.time_manager = time_manager
         self.transposition_table = {}
         
     def order_moves(self, moves):
