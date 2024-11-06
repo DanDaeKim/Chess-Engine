@@ -157,3 +157,5 @@ class ChessBoard:
 
         return False
 
+# Here we continue with some further prep
+
